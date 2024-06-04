@@ -18,3 +18,9 @@
 - IDE para compilación del código -- VisualEstudioCode o Pycharm
 
 ----
+
+#### Como Usarlo
+- dsfjhfdsa
+- dsakjfla
+- dsvdf             aki tienes que poner como utilizarlo, meco tacuri
+- 
