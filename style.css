@@ -1,0 +1,99 @@
+/* Estilos para el encabezado */
+header {
+    background-color: #333; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    display: flex; /* Usar flexbox */
+    justify-content: center; /* Centrar elementos horizontalmente */
+}
+
+nav ul {
+    list-style-type: none; /* Eliminar viñetas de la lista */
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Mostrar elementos en línea */
+    margin-right: 20px; /* Espacio entre elementos */
+}
+
+nav ul li a {
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Eliminar subrayado */
+    font-size: 18px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+}
+
+nav ul li a:hover {
+    color: #ff6600; /* Cambio de color al pasar el ratón */
+}
+
+/* Estilos para la sección de inicio */
+#inicio {
+    background-image: url('img/interfaz de hotel.jpg'); /* Fondo de imagen */
+    background-size: cover; /* La imagen cubre toda la pantalla */
+    background-position: center; /* La imagen está centrada */
+    color: #fff; /* Color del texto */
+    padding: 50px; /* Espaciado interno */
+    text-align: center; /* Centrar texto horizontalmente */
+    height: 100vh; /* Altura igual al 100% del viewport */
+    display: flex; /* Usamos flexbox para centrar verticalmente */
+    flex-direction: column; /* Apilamos los elementos verticalmente */
+    justify-content: center; /* Centramos verticalmente */
+}
+
+#inicio h1 {
+    font-size: 36px; /* Tamaño del texto del título */
+}
+
+#inicio p {
+    font-size: 18px; /* Tamaño del texto del párrafo */
+}
+
+/* Estilos para la sección de servicios especiales */
+.servicios-especiales {
+    margin-top: 50px; /* Ajusta este valor según sea necesario */
+    text-align: center; /* Centrar texto horizontalmente */
+}
+.servicios-container {
+    display: flex; /* Utilizar flexbox */
+    justify-content: center; /* Centrar los elementos horizontalmente */
+}
+
+.servicio {
+    margin: 20px 10px 0; /* Margen superior de 20px y 0 en los lados */
+    background-size: cover; /* La imagen cubre todo el contenedor */
+    width: 200px; /* Ancho de las imágenes */
+    height: 200px; /* Altura de las imágenes */
+    flex: 1; /* Distribuir el espacio disponible de manera equitativa */
+    display: flex; /* Usar flexbox */
+    flex-direction: column; /* Apilar elementos verticalmente */
+    justify-content: center; /* Centrar verticalmente */
+    align-items: center; /* Centrar horizontalmente */
+}
+.servicio:nth-child(1) {
+    background-image: url('img/spa.jpg'); /* Fondo de spa */
+}
+
+.servicio:nth-child(2) {
+    background-image: url('img/comida.jpg'); /* Fondo de comida */
+}
+
+.servicio:nth-child(3) {
+    background-image: url('img/Bar.jpg'); /* Fondo de bar */
+}
+
+.servicio h3 {
+    margin-top: 10px; /* Margen superior */
+    font-size: 14px; /* Tamaño del texto */
+}
+
+
+.formulario-activo {
+    display: block;
+}
+
+/* Ocultar todos los formularios por defecto */
+#reservas form {
+    display: none;
+}

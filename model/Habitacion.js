@@ -1,68 +1,21 @@
-class Habitacion {
-    constructor(id, numero, precio, tipo) {
-        this.id = id;
-        this.numero = numero;
-        this.precio = precio;
-        this.tipo = tipo;
-        this.reservas = [];
-    }
+// habitacion.js
+const Habitacion = {
+    numeroPiso: 1,
+    numeroHabitacion: 1,
 
-    generarFactura(reserva) {
-        let factura = new Factura(reserva);
-        factura.generarFactura();
-    }
+    // Método para establecer los datos de la habitación
+    setHabitacion: function(numeroPiso, numeroHabitacion) {
+        this.numeroPiso = numeroPiso;
+        this.numeroHabitacion = numeroHabitacion;
+    },
 
-    estaDisponible(fechaInicio, fechaFin) {
-        for (let reserva of this.reservas) {
-            if (reserva.getFechaInicio() < fechaFin && reserva.getFechaFin() > fechaInicio) {
-                return false;
-            }
-        }
-        return true;
-    }
+    // Método para obtener los datos de la habitación
+    getHabitacion: function() {
+        return {
+            numeroPiso: this.numeroPiso,
+            numeroHabitacion: this.numeroHabitacion,
+        };
+    },
+};
 
-    agregarReserva(reserva) {
-        this.reservas.push(reserva);
-    }
-
-    // Getters y setters
-    getId() {
-        return this.id;
-    }
-
-    setId(id) {
-        this.id = id;
-    }
-
-    getNumero() {
-        return this.numero;
-    }
-
-    setNumero(numero) {
-        this.numero = numero;
-    }
-
-    getPrecio() {
-        return this.precio;
-    }
-
-    setPrecio(precio) {
-        this.precio = precio;
-    }
-
-    getTipo() {
-        return this.tipo;
-    }
-
-    setTipo(tipo) {
-        this.tipo = tipo;
-    }
-
-    getReservas() {
-        return this.reservas;
-    }
-
-    setReservas(reservas) {
-        this.reservas = reservas;
-    }
-}
+export default Habitacion;

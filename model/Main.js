@@ -1,21 +1,22 @@
+// Importar las clases necesarias
+import { Huesped } from '.js/Huesped.js';
+import { Habitacion } from '.js/Habitacion.js';
+import { Personal } from '.js/Personal.js';
+import { Turno } from './Turno.js';
+import { CheckinCheckout } from '.js/CheckinCheckout.js';
+import { Factura } from '.js/Factura.js';
+import { Reserva } from '.js/Reserva.js';
 
-import java.util.Date;
+// Función para manejar el botón Siguiente
+document.getElementById("btn-siguiente").addEventListener("click", function() {
+    // Obtener los datos del formulario
+    const nombre = document.getElementById("nombre").value;
+    const apellido = document.getElementById("apellido").value;
+    const documento = document.getElementById("documento").value;
+    const cantidad = document.getElementById("cantidad").value;
 
-public class Main {
-    public static void main(String[] args) {
-        // Crear instancias de las clases y probar su funcionalidad
-        Huesped huesped = new Huesped(1, "Juan", "Calle Falsa 123", "123456789", "juan@example.com", "ABC123");
-        Habitacion habitacion = new Habitacion(1, 101, 150.0f, "Single");
-        Reserva reserva = new Reserva(1, new Date(), new Date(), false, "Pending", huesped, habitacion);
-        huesped.registrarReserva(reserva);
-        ServicioAdicional servicioAdicional = new ServicioAdicional(1, "Desayuno", 10.0f);
-        reserva.agregarServicio(servicioAdicional);
+    // Crear una instancia de Huesped con los datos
+    const huesped = new Huesped(nombre, apellido, documento, cantidad);
 
-        reserva.checkIn();
-        reserva.checkOut();
-
-        Personal personal = new Personal("Pedro", "Perez", "Recepcionista");
-        Turno turno = new Turno(new Date(), new Date());
-        turno.asignarTurnoPersonal(personal);
-    }
-}
+    // Realizar acciones adicionales si es necesario
+});

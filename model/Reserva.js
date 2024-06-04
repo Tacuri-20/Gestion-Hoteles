@@ -1,92 +1,27 @@
-class Reserva {
-    constructor(id, fechaInicio, fechaFin, pagado, estado, huesped, habitacion) {
-        this.id = id;
-        this.fechaInicio = fechaInicio;
-        this.fechaFin = fechaFin;
-        this.pagado = pagado;
-        this.estado = estado;
-        this.huesped = huesped;
-        this.habitacion = habitacion;
-        this.serviciosAdicionales = [];
-    }
+// reserva.js
+import Personal from './Personal.js';
+import Huesped from './Huesped.js';
+import Habitacion from './Habitacion.js';
+import Factura from './Factura.js';
 
-    checkIn() {
-        this.estado = "Checked In";
-    }
+const Reserva = {
+    // Método para realizar una reserva
+    hacerReserva: function(nombrePersonal, apellidoPersonal, documentoIdentidadPersonal, turnoPersonal,
+        nombreHuesped, apellidoHuesped, documentoIdentidadHuesped, cantidadPersonasHuesped,
+        numeroPisoHabitacion, numeroHabitacion, diaIngreso, diaSalida) {
 
-    checkOut() {
-        this.estado = "Checked Out";
-        // Generar factura al hacer check-out
-        let factura = new Factura(this);
-        factura.generarFactura();
-    }
+        // Establecer datos del personal
+        Personal.setPersonal(nombrePersonal, apellidoPersonal, documentoIdentidadPersonal, turnoPersonal);
 
-    agregarServicio(servicio) {
-        this.serviciosAdicionales.push(servicio);
-    }
+        // Establecer datos del huésped
+        Huesped.setHuesped(nombreHuesped, apellidoHuesped, documentoIdentidadHuesped, cantidadPersonasHuesped);
 
-    // Getters y setters
-    getId() {
-        return this.id;
-    }
+        // Establecer datos de la habitación
+        Habitacion.setHabitacion(numeroPisoHabitacion, numeroHabitacion);
 
-    setId(id) {
-        this.id = id;
-    }
+        // Generar factura
+        Factura.generarFactura(Huesped, diaIngreso, diaSalida);
+    },
+};
 
-    getFechaInicio() {
-        return this.fechaInicio;
-    }
-
-    setFechaInicio(fechaInicio) {
-        this.fechaInicio = fechaInicio;
-    }
-
-    getFechaFin() {
-        return this.fechaFin;
-    }
-
-    setFechaFin(fechaFin) {
-        this.fechaFin = fechaFin;
-    }
-
-    isPagado() {
-        return this.pagado;
-    }
-
-    setPagado(pagado) {
-        this.pagado = pagado;
-    }
-
-    getEstado() {
-        return this.estado;
-    }
-
-    setEstado(estado) {
-        this.estado = estado;
-    }
-
-    getHuesped() {
-        return this.huesped;
-    }
-
-    setHuesped(huesped) {
-        this.huesped = huesped;
-    }
-
-    getHabitacion() {
-        return this.habitacion;
-    }
-
-    setHabitacion(habitacion) {
-        this.habitacion = habitacion;
-    }
-
-    getServiciosAdicionales() {
-        return this.serviciosAdicionales;
-    }
-
-    setServiciosAdicionales(serviciosAdicionales) {
-        this.serviciosAdicionales = serviciosAdicionales;
-    }
-}
+export default Reserva;
