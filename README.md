@@ -20,7 +20,7 @@
 ----
 
 #### Como Usarlo
-- Se debe descargar las carpetas donde se encuentran todos los archicos.
+- Se debe descargar la carpeta pagina donde se encuentran todos los archicos.
 - Utilizar el entorno de desarrollo visual estudio code para abrir los archivos.
 - Descargue una extension llamada live server.
 - Ejecute el html por medio de la extension con click derecho y seleccion open live server.
