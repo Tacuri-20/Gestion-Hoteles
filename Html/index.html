@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Hoteles</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Hoteles</h1>
+    </header>
+
+    <!-- Sección de inicio con imagen de fondo -->
+    <section id="inicio" class="hero" style="background-image: url('../img/Interfaz de hotel.jpg');">
+        <div class="hero-text">
+            <h1>Hotel Paraíso</h1>
+        </div>
+    </section>
+
+    <main>
+        <section id="huespedes">
+            <div class="container">
+                <h2>Registrar Huésped</h2>
+                <form id="huespedForm">
+                    <div class="form-row">
+                        <input type="text" id="nombre" placeholder="Nombre" required>
+                        <input type="text" id="apellido" placeholder="Apellido" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" id="direccion" placeholder="Dirección" required>
+                        <input type="tel" id="telefono" placeholder="Teléfono" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="email" id="email" placeholder="Email" required>
+                        <input type="text" id="docIdentificacion" placeholder="Documento de Identificación" required>
+                    </div>
+                    <button type="submit">Registrar</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="reservas">
+            <div class="container">
+                <h2>Crear Reserva</h2>
+                <form id="reservaForm">
+                    <div class="form-row">
+                        <input type="date" id="fechaReserva" required>
+                        <input type="date" id="fechaCheckIn" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="date" id="fechaCheckOut" required>
+                        <input type="number" id="habitacionNumero" placeholder="Número de Habitación (1-100)" min="1" max="100" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="servicioAdicional">¿Desea algún servicio adicional?</label>
+                        <select id="servicioAdicional" required>
+                            <option value="">Seleccione un servicio</option>
+                            <option value="Comida">Comida</option>
+                            <option value="Spa">Spa</option>
+                            <option value="Bebidas Alcoholicas">Bebidas alcohólicas</option>
+                        </select>
+                    </div>
+                    <button type="submit">Crear Reserva</button>
+                </form>
+                <!-- Sección de Factura -->
+                <section id="factura" class="hidden">
+                    <div class="container">
+                        <h2>Factura</h2>
+                        <p id="facturaDetalles"></p>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <script type="module" src="../Js/script.js"></script>
+</body>
+</html>
