@@ -1,45 +1,27 @@
-class CheckInCheckOut {
-    constructor(fechaHoraCheckIn, fechaHoraCheckOut) {
-        this.id = ++CheckInCheckOut.contador;
-        this.fechaHoraCheckIn = fechaHoraCheckIn;
-        this.fechaHoraCheckOut = fechaHoraCheckOut;
-    }
+// checkincheckout.js
+const CheckInOut = {
+    fechaIngreso: null,
+    fechaSalida: null,
 
-    registrarCheckIn() {
-        this.fechaHoraCheckIn = new Date();
-        return true;
-    }
+    // Método para establecer la fecha de ingreso
+    setFechaIngreso: function(fecha) {
+        this.fechaIngreso = fecha;
+    },
 
-    registrarCheckOut() {
-        this.fechaHoraCheckOut = new Date();
-        return true;
-    }
+    // Método para establecer la fecha de salida
+    setFechaSalida: function(fecha) {
+        this.fechaSalida = fecha;
+    },
 
-    // Getters y setters
-    getId() {
-        return this.id;
-    }
+    // Método para obtener la fecha de ingreso
+    getFechaIngreso: function() {
+        return this.fechaIngreso;
+    },
 
-    setId(id) {
-        this.id = id;
-    }
+    // Método para obtener la fecha de salida
+    getFechaSalida: function() {
+        return this.fechaSalida;
+    },
+};
 
-    getFechaHoraCheckIn() {
-        return this.fechaHoraCheckIn;
-    }
-
-    setFechaHoraCheckIn(fechaHoraCheckIn) {
-        this.fechaHoraCheckIn = fechaHoraCheckIn;
-    }
-
-    getFechaHoraCheckOut() {
-        return this.fechaHoraCheckOut;
-    }
-
-    setFechaHoraCheckOut(fechaHoraCheckOut) {
-        this.fechaHoraCheckOut = fechaHoraCheckOut;
-    }
-}
-
-// Propiedad estática para el contador de instancias
-CheckInCheckOut.contador = 0;
+export default CheckInOut;
