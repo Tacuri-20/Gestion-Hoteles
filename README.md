@@ -20,8 +20,8 @@
 ----
 
 #### Como Usarlo
-- Se debe descargar las carpetas model donde se encuentran los archivos java script.
-- En mi caso utilice visual estudio code para abrir la carpeta y ejecutar los archivos.
+- Se debe descargar las carpetas donde se encuentran todos los archicos.
+- Utilizar el entorno de desarrollo visual estudio code para abrir los archivos.
 - Descargue una extension llamada live server.
-- Ejecute el html por medio de la estencion con click derecho y seleccion open live server.
+- Ejecute el html por medio de la extension con click derecho y seleccion open live server.
   
